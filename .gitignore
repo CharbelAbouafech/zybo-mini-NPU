@@ -18,3 +18,32 @@ __pycache__/
 
 .DS_Store
 Thumbs.db
+
+# Vitis workspace: only each project's src/ folder is tracked
+# (platform, BSP, .metadata, Debug/ are regenerated from the .xsa)
+/sw/baremetal/vitis/*
+!/sw/baremetal/vitis/*/
+/sw/baremetal/vitis/*/*
+!/sw/baremetal/vitis/*/src/
+
+# PetaLinux: only project-spec/ (configs, meta-user) is tracked
+/linux/*/build/
+/linux/*/images/
+/linux/*/components/
+/linux/*/.petalinux/
+/linux/*/project-spec/hw-description/
+/linux/*/project-spec/configs/*.old
+
+# Python
+venv/
+.venv/
+/python/data/
+*.ipynb_checkpoints/
+
+# Hardware exports (copies for the demo go in release/)
+*.xsa
+*.bit
+!/release/**
+
+# Editors
+.vscode/
