@@ -26,6 +26,9 @@ Thumbs.db
 /sw/baremetal/vitis/*/*
 !/sw/baremetal/vitis/*/src/
 
+# Linux programs: compiled ARM binaries are rebuilt from the .c files
+/sw/linux/loopback/dma_loopback
+
 # PetaLinux: only project-spec/ (configs, meta-user) is tracked
 /linux/*/build/
 /linux/*/images/
